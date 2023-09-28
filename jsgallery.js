@@ -76,6 +76,22 @@ modalWrapper.setAttribute(
 );
 modal1.appendChild(modalWrapper);
 
+const mgPrev = document.createElement("button");
+mgPrev.innerText = "<";
+mgPrev.setAttribute(
+  "style",
+  "font-family: Inter; font-size: 16px; color: black; cursor: pointer; position: absolute; top: 50%; left: -15px; background: white;"
+);
+modal1.appendChild(mgPrev);
+
+const mgNext = document.createElement("button");
+mgNext.innerText = ">";
+mgNext.setAttribute(
+  "style",
+  "font-family: Inter; font-size: 16px; color: black; cursor: pointer; position: absolute; top: 50%; right: -15px; background: white;"
+);
+modal1.appendChild(mgNext);
+
 const pictures = document.getElementsByClassName("gallery-item");
 
 // Utilisation d'une boucle pour ajouter un événement de clic à chaque élément
@@ -94,8 +110,54 @@ for (let i = 0; i < pictures.length; i++) {
 // event listener pour clic hors modale/fermeture
 document.addEventListener("click", (event) => {
   // condition if :  si le clic est en dehors de la modalWrapper modal 1, hors bouton d'ouverture de la modale 1 et si la modale 2 n'est pas visible
-  if (modal1.contains(event.target) && event.target !== modalWrapper) {
+  if (
+    modal1.contains(event.target) &&
+    event.target !== modalWrapper &&
+    event.target !== mgNext &&
+    event.target !== mgPrev
+  ) {
     // instructions post if pour fermer la modale 1
     modal1.style.display = "none";
   }
+});
+
+// variable pour suivre l'index de l'image actuellement affichée
+let currentImageIndex = 0;
+
+// Ajout d'un événement de clic à l'élément mgNext pour afficher la prochaine image
+mgNext.addEventListener("click", function () {
+  // Incrémentation l'index de l'image
+  currentImageIndex++;
+  // Vérification:  si l'index dépasse le nombre total d'images, revenir au début si nécessaire
+  if (currentImageIndex >= pictures.length) {
+    currentImageIndex = 0;
+  }
+  // Obtention de la source de l'image suivante
+  let srcImg = pictures[currentImageIndex].src;
+  // Effacement du contenu précédent du modalWrapper
+  modalWrapper.innerHTML = "";
+
+  // Création une nouvelle image et ajout au modalWrapper
+  const photo = document.createElement("img");
+  photo.src = srcImg;
+  modalWrapper.appendChild(photo);
+});
+
+//// Ajout d'un événement de clic à l'élément mgPrev pour afficher la prochaine image
+mgPrev.addEventListener("click", function () {
+  // Incrémentation l'index de l'image
+  currentImageIndex--;
+  // Vérification:  si l'index dépasse le nombre total d'images, revenir au début si nécessaire
+  if (currentImageIndex < 0) {
+    currentImageIndex = 8;
+  }
+  // Obtention de la source de l'image suivante
+  let srcImg = pictures[currentImageIndex].src;
+  // Effacement du contenu précédent du modalWrapper
+  modalWrapper.innerHTML = "";
+
+  // Création une nouvelle image et ajout au modalWrapper
+  const photo = document.createElement("img");
+  photo.src = srcImg;
+  modalWrapper.appendChild(photo);
 });
