@@ -72,9 +72,16 @@ const modalWrapper = document.createElement("div");
 modalWrapper.classList.add("modalWrapper");
 modalWrapper.setAttribute(
   "style",
-  "margin: auto; margin-top: 150px; display: flex; flex-direction: column; align-items: center; gap: 20px; color: black; padding: 0px; border:none; background-color: white; height: 731px; width: 630px;overflow: auto; border-radius: 10px;"
+  "margin: auto; margin-top: 200px; margin-bottom: 200px; padding:15px; border:none; background-color: white; height: auto; width: 498px;"
 );
 modal1.appendChild(modalWrapper);
+
+const zoneIcones = document.createElement("div");
+zoneIcones.setAttribute(
+  "style",
+  "height: 20px; width: auto; background-color: #FF0000; margin: 0px 15px 0px 15px;"
+);
+modalWrapper.appendChild(zoneIcones);
 
 const mgPrev = document.createElement("button");
 mgPrev.innerText = "<";
@@ -98,11 +105,13 @@ const pictures = document.getElementsByClassName("gallery-item");
 for (let i = 0; i < pictures.length; i++) {
   pictures[i].addEventListener("click", function () {
     modal1.style.display = "block";
+    document.body.style.overflow = "hidden";
     let srcImg = pictures[i].src;
     // Efface le contenu précédent du modalWrapper
     modalWrapper.innerHTML = "";
     const photo = document.createElement("img");
     photo.src = srcImg;
+    photo.setAttribute("style", "objectif-fit: cover, width: 466px;");
     modalWrapper.appendChild(photo);
   });
 }
@@ -118,6 +127,7 @@ document.addEventListener("click", (event) => {
   ) {
     // instructions post if pour fermer la modale 1
     modal1.style.display = "none";
+    document.body.style.overflow = "";
   }
 });
 
