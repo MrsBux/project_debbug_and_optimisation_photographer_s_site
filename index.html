@@ -14,6 +14,13 @@
       href="./assets/bootstrap/bootstrap.css"
       media="all"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@1,300;1,800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/style.css" media="all" />
     <link rel="preconnect" href="https://fonts.googleapis.com" media="all" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +28,7 @@
     <script src="./assets/bootstrap/bootstrap.bundle.js" async></script>
   </head>
   <body>
-    <div class="top-header">
+    <div id="top-header">
       <h1 class="name">Nina Carducci</h1>
       <div class="nav">
         <ul>
@@ -31,7 +38,7 @@
             >
           </li>
           <li>
-            <a href="#gallery" aria-label="lien vers la galerie de photo"
+            <a href="#portfolio" aria-label="lien vers la galerie de photo"
               >Galerie</a
             >
           </li>
@@ -133,17 +140,18 @@
         </button>
       </div>
     </div>
+
     <div id="about">
-      <div class="picture left">
+      <div class="div-picture left">
         <img
           src="./assets/images/nina.webp"
           class="presentation-photo"
           alt="photographie de la photographe Nina Carducci"
         />
       </div>
-      <div id="about-me">
-        <h2 class="about-me__title">A propos de moi</h2>
-        <p class="about-me__introduction">
+      <div class="about-me">
+        <h2>A propos de moi</h2>
+        <p class="introduction">
           Devenir photographe était pour moi une évidence. Comme si j’y étais
           prédestiné. Saisir un moment, une émotion, une situation, un endroit,
           une lumière et les rendre immortels, voilà ce qui me fait vibrer.
@@ -160,8 +168,9 @@
         </p>
       </div>
     </div>
+
     <div id="portfolio">
-      <h2 class="title">Portfolio</h2>
+      <h2>Portfolio</h2>
       <div class="galleryG"></div>
       <div class="gallery">
         <img
@@ -223,17 +232,18 @@
       <div class="quote">
         <figure>
           <blockquote>
-            <p class="quote__text">
+            <p class="quote_text">
               Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou
               qu’un fait est traduit en photo, il cesse d’être un fait pour
               devenir une opinion. L’inexactitude n’existe pas en photographie.
               Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
             </p>
           </blockquote>
-          <figcaption class="quote__author">- Richard Avedon</figcaption>
+          <figcaption class="quote_author">- Richard Avedon</figcaption>
         </figure>
       </div>
     </div>
+
     <div id="services">
       <h2 class="title">Mes services</h2>
       <div class="container">
@@ -280,22 +290,25 @@
         </div>
       </div>
     </div>
+
     <div class="quote">
       <figure>
         <blockquote>
-          <p class="quote__text">
+          <p class="quote_text">
             De manière inconsciente, je crois, je guette un regard, une
             expression, des traits ou une nostalgie capable de résumer ou plus
             exactement de révéler une vie
           </p>
         </blockquote>
-        <figcaption class="quote__author">- Richard Avedon</figcaption>
+        <figcaption class="quote_author">- Richard Avedon</figcaption>
       </figure>
     </div>
     <div id="contact">
       <div class="container">
         <div class="form-container">
-          <h2>Une question ? Une demande de devis ?</h2>
+          <h2 class="invitation-contact">
+            Une question? Une demande de devis ?
+          </h2>
           <p>
             N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
           </p>
@@ -317,7 +330,7 @@
             <input type="submit" value="Envoyer" />
           </form>
         </div>
-        <div class="picture right">
+        <div class="div-picture right">
           <img
             src="./assets/images/camera.webp"
             class="contact-photo"
