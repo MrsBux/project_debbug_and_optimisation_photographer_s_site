@@ -111,10 +111,6 @@ button {
   padding: 25px;
 }
 
-/* button:active {
-  background-color: #beb45a;
-} */
-
 .gallery-item {
   width: 424px;
   height: 424px;
@@ -136,39 +132,6 @@ button {
   text-align: center;
   padding-block: 2em;
 }
-.gallery .nav {
-  justify-content: center;
-}
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #beb45a;
-  border-radius: 0;
-}
-.nav-pills .nav-link {
-  color: #000;
-}
-.item-column {
-  position: relative;
-  margin-bottom: 0 !important;
-  padding: 0;
-}
-.item-column::after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
-
-/* .mg-prev,
-.mg-next {
-  width: 30px;
-  height: 30px;
-  border-radius: 00%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  font-size: 24px;
-} */
 
 .quote {
   font-family: "Spectral";

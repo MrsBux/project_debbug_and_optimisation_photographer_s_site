@@ -188,22 +188,6 @@ svg {
   vertical-align: middle;
 }
 
-/* table {
-  caption-side: bottom;
-  border-collapse: collapse;
-}
-
-thead,
-tbody,
-tfoot,
-tr,
-td,
-th {
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-} */
-
 label {
   display: inline-block;
 }
