@@ -124,6 +124,12 @@ button {
   height: 888px;
 }
 
+/*------------------------------------------------------------------------------------------------------------Header*/
+
+#header img {
+  object-fit: cover;
+}
+
 /*------------------------------------------------------------------------------------------------------------About*/
 
 #about {
@@ -321,18 +327,18 @@ input[type="submit"] {
 @media all and (max-width: 1000px) {
   #about {
     flex-direction: column;
+    text-align: center;
   }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .picture {
     width: 50%;
-  }
-  .picture.left::before {
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    bottom: auto;
-    top: 0;
-    left: 0;
-    z-index: -1;
   }
 
   #services .container {
@@ -371,11 +377,17 @@ input[type="submit"] {
     right: 0;
     z-index: -1;
   }
-}
 
+  .div-picture.left::before {
+    display: none;
+    width: 100%;
+    height: 30%;
+  }
+}
 @media all and (max-width: 650px) {
   .top-header {
     flex-direction: column;
+    flex-wrap: wrap;
     padding-inline: 0;
   }
   .top-header .nav,
@@ -409,31 +421,14 @@ input[type="submit"] {
   .picture {
     width: 80%;
   }
+  .div-picture {
+    display: none;
+  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
   }
 }
-
-@media (min-width: 1200px) {
-  h2,
-  .h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  h3,
-  .h3 {
-    font-size: 1.75rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  h4,
-  .h4 {
-    font-size: 1.5rem;
-  }
-}
+ */
