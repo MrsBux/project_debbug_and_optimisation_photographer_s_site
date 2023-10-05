@@ -44,6 +44,7 @@ const allBtn = document.querySelectorAll("button");
 function resetFilterButtons() {
   allBtn.forEach((button) => {
     button.style.backgroundColor = "";
+    button.style.color = "";
   });
 }
 
@@ -54,7 +55,8 @@ buttonFiltersName.forEach(function (name) {
   filterButton.addEventListener("click", function () {
     resetFilterButtons(); // Réinitialise tous les boutons de filtre
     filtrerImages(name); // Appelle la fonction de filtrage avec le tag correspondant
-    filterButton.style = "background-color: #BEB45A ";
+    filterButton.style.backgroundColor = "#BEB45A"; // Correction : utilisez "=" pour définir la couleur de fond
+    filterButton.style.color = "#ffffff"; // Définir la couleur du texte
   });
 });
 
@@ -68,36 +70,45 @@ modal1.setAttribute(
 modal1.style.display = "none";
 gallery.appendChild(modal1);
 
-const modalWrapper = document.createElement("div");
+const modalWrapper = document.createElement("element");
 modalWrapper.classList.add("modalWrapper");
 modalWrapper.setAttribute(
   "style",
-  "margin: auto; margin-top: 200px; margin-bottom: 200px; padding:15px; border:none; background-color: white; height: auto; width: 498px;"
+  "display: flex; justify-content: center; align-items: center; margin: auto; margin-top:200px; padding:15px; border:none; background-color: white; height: auto; width: 498px;"
 );
 modal1.appendChild(modalWrapper);
 
-const zoneIcones = document.createElement("div");
-zoneIcones.setAttribute(
-  "style",
-  "height: 20px; width: auto; background-color: #FF0000; margin: 0px 15px 0px 15px;"
-);
-modalWrapper.appendChild(zoneIcones);
+// const mgPrev = document.createElement("button");
+// mgPrev.innerText = "<";
+// mgPrev.setAttribute(
+//   "style",
+//   "font-family: Inter; font-size: 16px; color: black; position: relative; top: 50%; left: 30px; background: white;"
+// );
+// modalWrapper.appendChild(mgPrev);
+
+// const mgNext = document.createElement("button");
+// mgNext.innerText = ">";
+// mgNext.setAttribute(
+//   "style",
+//   "font-family: Inter; font-size: 16px; color: black; cursor: pointer; position: absolute; top: 50%; right: -15px; background: white;"
+// );
+// modal1.appendChild(mgNext);
+
+// const pictures = document.getElementsByClassName("gallery-item");
 
 const mgPrev = document.createElement("button");
 mgPrev.innerText = "<";
 mgPrev.setAttribute(
   "style",
-  "font-family: Inter; font-size: 16px; color: black; cursor: pointer; position: absolute; top: 50%; left: -15px; background: white;"
+  "font-family: Inter; font-size: 16px; color: black; position: relative; top: 50%; left: -15px; background: white;"
 );
-modal1.appendChild(mgPrev);
 
 const mgNext = document.createElement("button");
 mgNext.innerText = ">";
 mgNext.setAttribute(
   "style",
-  "font-family: Inter; font-size: 16px; color: black; cursor: pointer; position: absolute; top: 50%; right: -15px; background: white;"
+  "font-family: Inter; font-size: 16px; color: black; cursor: pointer;  relative; top: 50%; left: -15px; background: white;"
 );
-modal1.appendChild(mgNext);
 
 const pictures = document.getElementsByClassName("gallery-item");
 
@@ -109,10 +120,14 @@ for (let i = 0; i < pictures.length; i++) {
     let srcImg = pictures[i].src;
     // Efface le contenu précédent du modalWrapper
     modalWrapper.innerHTML = "";
+
     const photo = document.createElement("img");
     photo.src = srcImg;
-    photo.setAttribute("style", "objectif-fit: cover, width: 466px;");
+    photo.setAttribute("style", "object-fit: cover; width: 466px;");
+
+    modalWrapper.appendChild(mgPrev);
     modalWrapper.appendChild(photo);
+    modalWrapper.appendChild(mgNext);
   });
 }
 
@@ -150,7 +165,9 @@ mgNext.addEventListener("click", function () {
   // Création une nouvelle image et ajout au modalWrapper
   const photo = document.createElement("img");
   photo.src = srcImg;
+  modalWrapper.appendChild(mgPrev);
   modalWrapper.appendChild(photo);
+  modalWrapper.appendChild(mgNext);
 });
 
 //// Ajout d'un événement de clic à l'élément mgPrev pour afficher la prochaine image
@@ -169,5 +186,8 @@ mgPrev.addEventListener("click", function () {
   // Création une nouvelle image et ajout au modalWrapper
   const photo = document.createElement("img");
   photo.src = srcImg;
+
+  modalWrapper.appendChild(mgPrev);
   modalWrapper.appendChild(photo);
+  modalWrapper.appendChild(mgNext);
 });
