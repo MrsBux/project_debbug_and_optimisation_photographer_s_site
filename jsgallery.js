@@ -78,24 +78,6 @@ modalWrapper.setAttribute(
 );
 modal1.appendChild(modalWrapper);
 
-// const mgPrev = document.createElement("button");
-// mgPrev.innerText = "<";
-// mgPrev.setAttribute(
-//   "style",
-//   "font-family: Inter; font-size: 16px; color: black; position: relative; top: 50%; left: 30px; background: white;"
-// );
-// modalWrapper.appendChild(mgPrev);
-
-// const mgNext = document.createElement("button");
-// mgNext.innerText = ">";
-// mgNext.setAttribute(
-//   "style",
-//   "font-family: Inter; font-size: 16px; color: black; cursor: pointer; position: absolute; top: 50%; right: -15px; background: white;"
-// );
-// modal1.appendChild(mgNext);
-
-// const pictures = document.getElementsByClassName("gallery-item");
-
 const mgPrev = document.createElement("button");
 mgPrev.innerText = "<";
 mgPrev.setAttribute(
