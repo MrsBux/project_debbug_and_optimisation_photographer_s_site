@@ -313,6 +313,23 @@ input[type="submit"] {
   font-size: large;
   font-weight: 600;
 }
+
+/*------------------------------------------------------------------------------------------------------------Footer*/
+
+#footer {
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 22px;
+  color: antiquewhite;
+  background-color: #1c6474;
+}
+
+#footer p {
+  margin: 0px;
+  padding: 20px;
+}
+
 /* ---------------------------------------------------------------------------------------responsive design*/
 @media all and (max-width: 1180px) {
   .picture {
