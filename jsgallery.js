@@ -3,10 +3,8 @@
 const sectionPortfolio = document.querySelector("#portfolio");
 const galleryFiltres = sectionPortfolio.querySelector(".galleryG");
 const gallery = document.querySelector(".gallery");
-
 const buttonFilters = document.createElement("div");
 galleryFiltres.appendChild(buttonFilters);
-
 // Tableau des noms de filtres
 const buttonFiltersName = [
   "Tous",
@@ -15,7 +13,6 @@ const buttonFiltersName = [
   "Entreprises",
   "Portrait",
 ];
-
 // Ajout des boutons de filtre en utilisant les noms du tableau
 buttonFiltersName.forEach(function (name) {
   const filterButton = document.createElement("button");
@@ -24,10 +21,8 @@ buttonFiltersName.forEach(function (name) {
   filterButton.id = name + "Btn";
   buttonFilters.appendChild(filterButton);
 });
-
 // Sélection images de la galerie
 const images = document.querySelectorAll(".gallery-item");
-
 // Fonction pour filtrer les images par tag
 function filtrerImages(tag) {
   images.forEach(function (img) {
@@ -40,18 +35,15 @@ function filtrerImages(tag) {
   });
 }
 const allBtn = document.querySelectorAll("button");
-
 function resetFilterButtons() {
   allBtn.forEach((button) => {
     button.style.backgroundColor = "";
     button.style.color = "";
   });
 }
-
 // Boucle pour ajouter un event listener à chaque bouton
 buttonFiltersName.forEach(function (name) {
   const filterButton = document.getElementById(name + "Btn");
-
   filterButton.addEventListener("click", function () {
     resetFilterButtons(); // Réinitialise tous les boutons de filtre
     filtrerImages(name); // Appelle la fonction de filtrage avec le tag correspondant
@@ -59,7 +51,6 @@ buttonFiltersName.forEach(function (name) {
     filterButton.style.color = "#ffffff"; // Définir la couleur du texte
   });
 });
-
 const modal1 = document.createElement("aside");
 modal1.classList.add("modal1");
 modal1.role = "dialog";
@@ -69,7 +60,6 @@ modal1.setAttribute(
 );
 modal1.style.display = "none";
 gallery.appendChild(modal1);
-
 const modalWrapper = document.createElement("element");
 modalWrapper.classList.add("modalWrapper");
 modalWrapper.setAttribute(
@@ -77,23 +67,19 @@ modalWrapper.setAttribute(
   "display: flex; justify-content: center; align-items: center; margin: auto; margin-top:200px; padding:15px; border:none; background-color: white; height: auto; width: 498px;"
 );
 modal1.appendChild(modalWrapper);
-
 const mgPrev = document.createElement("button");
 mgPrev.innerText = "<";
 mgPrev.setAttribute(
   "style",
   "font-family: Inter; font-size: 16px; color: black; position: relative; top: 50%; left: -15px; background: white;"
 );
-
 const mgNext = document.createElement("button");
 mgNext.innerText = ">";
 mgNext.setAttribute(
   "style",
   "font-family: Inter; font-size: 16px; color: black; cursor: pointer;  relative; top: 50%; left: -15px; background: white;"
 );
-
 const pictures = document.getElementsByClassName("gallery-item");
-
 // Utilisation d'une boucle pour ajouter un événement de clic à chaque élément
 for (let i = 0; i < pictures.length; i++) {
   pictures[i].addEventListener("click", function () {
@@ -112,7 +98,6 @@ for (let i = 0; i < pictures.length; i++) {
     modalWrapper.appendChild(mgNext);
   });
 }
-
 // event listener pour clic hors modale/fermeture
 document.addEventListener("click", (event) => {
   // condition if :  si le clic est en dehors de la modalWrapper modal 1, hors bouton d'ouverture de la modale 1 et si la modale 2 n'est pas visible
@@ -127,10 +112,8 @@ document.addEventListener("click", (event) => {
     document.body.style.overflow = "";
   }
 });
-
 // variable pour suivre l'index de l'image actuellement affichée
 let currentImageIndex = 0;
-
 // Ajout d'un événement de clic à l'élément mgNext pour afficher la prochaine image
 mgNext.addEventListener("click", function () {
   // Incrémentation l'index de l'image
@@ -151,7 +134,6 @@ mgNext.addEventListener("click", function () {
   modalWrapper.appendChild(photo);
   modalWrapper.appendChild(mgNext);
 });
-
 //// Ajout d'un événement de clic à l'élément mgPrev pour afficher la prochaine image
 mgPrev.addEventListener("click", function () {
   // Incrémentation l'index de l'image
