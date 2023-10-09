@@ -1,53 +1,42 @@
-/* Général */
-
 * {
   font-family: "Inter";
   font-style: normal;
 }
-
 body {
   max-width: 1920px;
   margin: auto;
   font-size: 17;
 }
-
 img,
 svg {
   vertical-align: middle;
 }
-
 label {
   display: inline-block;
   font-size: 17px;
 }
-
 textarea {
   resize: vertical;
 }
-
 h1 {
   font-size: 30px;
   font-weight: 400;
 }
-
 h2 {
   font-size: 28px;
   font-weight: 400;
   text-align: center;
   padding: 50px;
 }
-
 h3 {
   font-size: 26px;
   font-weight: 400;
   margin: none;
 }
-
 h4 {
   font-size: 24px;
   font-weight: 400;
 }
-
 form {
   display: flex;
   flex-direction: column;
@@ -55,7 +44,6 @@ form {
   align-items: flex-start;
   font-size: 17px;
 }
-
 form input,
 form textarea {
   width: 100%;
@@ -65,21 +53,17 @@ form textarea {
   line-height: 25px;
   font-size: 17px;
 }
-
 button {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  background-color: white;
+  background-color: #fff;
   border: none;
   padding: 25px;
 }
-
-/*------------------------------------------------------------------------------------------------------------top header*/
-
 #top-header {
-  background-color: white;
+  background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -89,12 +73,10 @@ button {
   padding-block: 30px;
   align-items: center;
 }
-
 .logo-insta {
   width: 20px;
   height: 20px;
 }
-
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -102,36 +84,26 @@ button {
   margin-bottom: 0;
   list-style: none;
 }
-
 .nav ul {
   display: flex;
   list-style-type: none;
   font-size: 14px;
   margin-bottom: 0;
 }
-
 .nav li {
   padding-inline: 10px;
 }
-
 .nav a {
   text-decoration: none;
   color: #000;
 }
-
 .d-block {
   width: 100%;
   height: 888px;
 }
-
-/*------------------------------------------------------------------------------------------------------------Header*/
-
 #header img {
   object-fit: cover;
 }
-
-/*------------------------------------------------------------------------------------------------------------About*/
-
 #about {
   display: flex;
   background-color: #fbede2;
@@ -140,11 +112,9 @@ button {
   font-size: 20px;
   gap: 50px;
 }
-
 #about h2 {
   text-align: left;
 }
-
 .div-picture.left::before {
   content: " ";
   background-color: #e5975f;
@@ -155,7 +125,6 @@ button {
   left: 0;
   z-index: -1;
 }
-
 .div-picture {
   display: flex;
   flex: 1;
@@ -164,52 +133,43 @@ button {
   justify-content: flex-start;
   align-items: center;
 }
-
 .presentation-photo {
   width: 560px;
   height: 558.45px;
 }
-
 .about-me p {
   flex: 2;
   width: 95%;
 }
-
 .introduction {
   font-family: "Spectral";
   font-weight: 400;
   font-style: italic;
   text-align: justify;
 }
-
 .descriptions {
   text-align: justify;
 }
-/*------------------------------------------------------------------------------------------------------------Portfolio*/
 #portfolio {
   padding: auto;
 }
-
 #portfolio h2 {
   margin: none;
   padding: none;
 }
-
 .galleryG {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 30px;
 }
-
 .gallery-item {
   width: 424px;
   height: 424px;
   object-fit: cover;
 }
-
 .gallery {
-  margin: 0px 175px 0px 175px;
+  margin: 0 175px 0 175px;
   padding: 15px;
   display: flex;
   flex-direction: row;
@@ -218,7 +178,6 @@ button {
   align-items: center;
   gap: 20px;
 }
-
 .quote_text {
   padding-top: 50px;
   font-family: "Spectral";
@@ -232,8 +191,6 @@ button {
   font-size: 22px;
   padding-bottom: 25px;
 }
-/*------------------------------------------------------------------------------------------------------------Services*/
-
 #services {
   background-color: #a8d5d8;
   position: relative;
@@ -241,12 +198,10 @@ button {
   display: flex;
   flex-direction: column;
 }
-
 #services h2 {
   margin: none;
-  padding: 25px 0px 50px 0px;
+  padding: 25px 0 50px 0;
 }
-
 #services .container::before {
   content: " ";
   background-color: #1c6474;
@@ -257,7 +212,6 @@ button {
   left: 0;
   z-index: 0;
 }
-
 .container {
   display: flex;
   flex-direction: row;
@@ -265,9 +219,8 @@ button {
   align-items: flex-start;
   gap: 50px;
 }
-
 .service {
-  background-color: white;
+  background-color: #fff;
   width: 30%;
   height: 507px;
   display: flex;
@@ -275,11 +228,9 @@ button {
   justify-content: center;
   gap: 10px;
   z-index: 1;
-  padding: 0px 10px 0px 10px;
+  padding: 0 10px 0 10px;
   text-align: justify;
 }
-/*------------------------------------------------------------------------------------------------------------Contact*/
-
 #contact {
   margin: auto;
   background-color: #dae3be;
@@ -287,19 +238,16 @@ button {
   padding: 30px 100px 100px 100px;
   font-size: 17px;
 }
-
 .contact-photo {
   height: 418px;
   width: 417px;
 }
-
 #contact .container {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
 }
-
 .div-picture.right::before {
   content: " ";
   background-color: #beb45a;
@@ -313,7 +261,6 @@ button {
 .form-container {
   flex: 2;
 }
-
 input[type="submit"] {
   background-color: #36312d;
   padding: 5px;
@@ -321,9 +268,6 @@ input[type="submit"] {
   font-size: large;
   font-weight: 600;
 }
-
-/*------------------------------------------------------------------------------------------------------------Footer*/
-
 #footer {
   text-align: center;
   font-family: "Inter";
@@ -332,13 +276,10 @@ input[type="submit"] {
   color: antiquewhite;
   background-color: #1c6474;
 }
-
 #footer p {
-  margin: 0px;
+  margin: 0;
   padding: 20px;
 }
-
-/* ---------------------------------------------------------------------------------------responsive design*/
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
@@ -353,18 +294,15 @@ input[type="submit"] {
     text-align: center;
     width: 100%;
   }
-
   .about-me {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
   .picture {
     width: 50%;
   }
-
   #services .container {
     flex-direction: column;
   }
@@ -377,7 +315,6 @@ input[type="submit"] {
   .service__description {
     margin-bottom: 1em;
   }
-
   #services .container::before {
     width: 30%;
     height: 100%;
@@ -386,7 +323,6 @@ input[type="submit"] {
     left: auto;
     z-index: 0;
   }
-
   #contact .container {
     flex-direction: column;
   }
@@ -401,14 +337,12 @@ input[type="submit"] {
     right: 0;
     z-index: -1;
   }
-
   .div-picture.left::before {
     display: none;
     width: 100%;
     height: 30%;
   }
 }
-
 @media all and (max-width: 650px) {
   #top-header .nav,
   #top-header .nav ul {
@@ -420,7 +354,6 @@ input[type="submit"] {
     padding-block: 1em;
     text-align: center;
   }
-
   #top-header {
     flex-direction: column;
     flex-wrap: wrap;
