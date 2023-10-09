@@ -138,6 +138,7 @@ button {
   padding: 75px;
   position: relative;
   font-size: 20px;
+  gap: 50px;
 }
 
 #about h2 {
@@ -156,9 +157,12 @@ button {
 }
 
 .div-picture {
+  display: flex;
   flex: 1;
   margin: 0 20px;
   z-index: 0;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .presentation-photo {
@@ -168,16 +172,19 @@ button {
 
 .about-me p {
   flex: 2;
-  width: 80%;
+  width: 95%;
 }
 
 .introduction {
   font-family: "Spectral";
   font-weight: 400;
   font-style: italic;
-  width: 80%;
+  text-align: justify;
 }
 
+.descriptions {
+  text-align: justify;
+}
 /*------------------------------------------------------------------------------------------------------------Portfolio*/
 #portfolio {
   padding: auto;
@@ -230,7 +237,7 @@ button {
 #services {
   background-color: #a8d5d8;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -261,14 +268,15 @@ button {
 
 .service {
   background-color: white;
-  max-width: 390px;
   width: 30%;
-  height: 337px;
-  padding: 1em;
+  height: 507px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   z-index: 1;
+  padding: 0px 10px 0px 10px;
+  text-align: justify;
 }
 /*------------------------------------------------------------------------------------------------------------Contact*/
 
