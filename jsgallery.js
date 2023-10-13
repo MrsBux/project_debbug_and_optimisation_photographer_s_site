@@ -51,6 +51,7 @@ buttonFiltersName.forEach(function (name) {
     filterButton.style.color = "#ffffff"; // Définir la couleur du texte
   });
 });
+
 const modal1 = document.createElement("aside");
 modal1.classList.add("modal1");
 modal1.role = "dialog";
@@ -67,6 +68,7 @@ modalWrapper.setAttribute(
   "display: flex; justify-content: center; align-items: center; margin: auto; margin-top:200px; padding:15px; border:none; background-color: white; height: auto; width: 498px;"
 );
 modal1.appendChild(modalWrapper);
+
 const mgPrev = document.createElement("button");
 mgPrev.innerText = "<";
 mgPrev.setAttribute(
@@ -79,6 +81,9 @@ mgNext.setAttribute(
   "style",
   "font-family: Inter; font-size: 16px; color: black; cursor: pointer;  relative; top: 50%; left: -15px; background: white;"
 );
+// variable pour suivre l'index de l'image actuellement affichée
+let currentImageIndex = 0;
+
 const pictures = document.getElementsByClassName("gallery-item");
 // Utilisation d'une boucle pour ajouter un événement de clic à chaque élément
 for (let i = 0; i < pictures.length; i++) {
@@ -86,6 +91,10 @@ for (let i = 0; i < pictures.length; i++) {
     modal1.style.display = "block";
     document.body.style.overflow = "hidden";
     let srcImg = pictures[i].src;
+
+    // Mettez à jour l'index en fonction de l'élément cliqué
+    currentImageIndex = i;
+
     // Efface le contenu précédent du modalWrapper
     modalWrapper.innerHTML = "";
 
@@ -112,8 +121,7 @@ document.addEventListener("click", (event) => {
     document.body.style.overflow = "";
   }
 });
-// variable pour suivre l'index de l'image actuellement affichée
-let currentImageIndex = 0;
+
 // Ajout d'un événement de clic à l'élément mgNext pour afficher la prochaine image
 mgNext.addEventListener("click", function () {
   // Incrémentation l'index de l'image
