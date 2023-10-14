@@ -92,7 +92,7 @@ for (let i = 0; i < pictures.length; i++) {
     document.body.style.overflow = "hidden";
     let srcImg = pictures[i].src;
 
-    // Mettez à jour l'index en fonction de l'élément cliqué
+    // Met à jour l'index en fonction de l'élément cliqué
     currentImageIndex = i;
 
     // Efface le contenu précédent du modalWrapper
